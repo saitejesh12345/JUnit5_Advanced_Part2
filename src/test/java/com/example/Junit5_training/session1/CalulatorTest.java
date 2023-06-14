@@ -1,6 +1,14 @@
 package com.example.Junit5_training.session1;
 
+
 import org.junit.jupiter.api.*;
+//import org.junit.jupiter.params.ParameterizedTest;
+//import org.junit.jupiter.params.provider.Arguments;
+//import org.junit.jupiter.params.provider.CsvFileSource;
+//import org.junit.jupiter.params.provider.CsvSource;
+//import org.junit.jupiter.params.provider.MethodSource;
+//
+//import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -111,6 +119,8 @@ assertEquals(expectedExceptionMessage,actualException.getMessage(),"Unexpected E
     }
 
 
+
+
     @DisplayName("Test 4-2 =2")
     @Test
     void integerSubtractionTest(){
@@ -124,35 +134,6 @@ assertEquals(expectedExceptionMessage,actualException.getMessage(),"Unexpected E
         //verify check if two values are equal
         assertEquals(2,res,"4-2 didn't produce output 2");
     }
-    @DisplayName("Test 33-23 =10")
-    @Test
-    void integerSubtractionTest1(){
 
-        System.out.println("Test 33-23 =10");
-        //Structure pattern 1. Arrange
-        //create Instance of Calculator class
 
-       // Calculator calculator = new Calculator();//we used @ BeforeEach class
-        //Invoking the class using Object calling method and storing result in res variable
-
-        int minuend = 33;
-           int subtrahed =23;
-           int expectedResult = 10;
-        int actualResult = calculator.integerSubtraction(minuend ,subtrahed);
-        //verify check if two values are equal
-        assertEquals(expectedResult,actualResult,
-                () -> minuend + "-" + subtrahed+" "+"didn't produce output:"+expectedResult);
-        //in assertion method each method we have dynamically computed message,this might
-        // slow down your test methods a little bit in a small application,you will not even notice the difference but in much
-        // larger application. with Many test methods,an assertion message is used .
-        // Developers like to optimze it,and the reason it might slow down your tests alittle bit
-        // is because this message will computed every time you test methods,grants whether it passes or fails.
-        // this message will always be computed.It gets executed even though it might never be used.
-        //So to optimize performance of unit Test,Developers like to convert this test Message into
-        //Lambda and it can be converted to Lambda this way.
-        //Now this message is lambda function that will be executed when this assertion fails the testMethod.
-        //otheriwse ,if the test is passing ,this lambda function will never get executed and no Resourses will be spent
-        //to compute this error message.
-
-    }
 }
