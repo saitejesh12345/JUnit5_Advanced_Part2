@@ -25,5 +25,7 @@ Advanced Concepts of Junit5 there is two Microservices ClassessOrderDemo is seco
 **->Repeated Tests with @RepeatedTest annotation,**
 **Advanced Concept-5[@RepeatedTest Annotation]**
  
+ 
+ **->.Run unit tests in any order you need: (Random, Order by Name, Order by Index),[ClassesOrderDemo]**
 
-**->Change Test Instance lifecycle with @TestInstance (PER_CLASS, PER_METHOD)**
+ 
